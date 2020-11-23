@@ -1,7 +1,6 @@
 #include <iostream>
 using namespace std;
 void show(int numbers[]){
-    cout<<"\n Entered Values:";
     for(int i=0;i<5;i++)
         cout<<" "<<numbers[i];
 }
@@ -21,9 +20,12 @@ int main()
         cout<<"\n Enter a number:";
         cin>>numbers[i];
         sum+=numbers[i];
+        cout<<"\n Entered Values:";
         show(numbers);
     }
-    cout<<"";
+    average = sum/(double)5;
+    cout<<"\n\nThe sum of ",show(numbers),cout<<" is "<<sum;
+    cout<<"\nThe average of ",show(numbers),cout<<" is "<<average;;
     return 0;
 
 }

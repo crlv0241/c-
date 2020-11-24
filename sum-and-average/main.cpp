@@ -9,7 +9,7 @@ int main()
     int numbers[5]={0,0,0,0,0};
     double sum =0,average =0;
     cout<<"XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
-    cout << "\n\t SUM AND AVERAGE OF 5 NUMBERS" << endl;
+    cout << "\n\t SUM AND AVERAGE OF 5 NUMBERS!" << endl;
     cout<<"XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
     cout<<"\n             *** Overview ***";
     cout<<"\n    This program will compute the sum and"

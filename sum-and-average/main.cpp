@@ -4,6 +4,15 @@ void show(int numbers[]){
     for(int i=0;i<5;i++)
         cout<<" "<<numbers[i];
 }
+
+int addNumbers(int arr[]){
+    int sum=0;
+    for(int i=0;i<=5;i++){
+        sum += arr[i];
+    }
+
+return sum;
+}
 int main()
 {
     int numbers[5]={0,0,0,0,0};
@@ -18,10 +27,10 @@ int main()
     for(int i=0;i<5;++i){
         cout<<"\n Enter a number:";
         cin>>numbers[i];
-        sum+=numbers[i];
         cout<<"\n Entered Values:";
         show(numbers);
     }
+    sum = addNumbers(numbers);
     average = sum/(double)5;
     cout<<"\n\nThe sum of ",show(numbers),cout<<" is "<<sum;
     cout<<"\nThe average of ",show(numbers),cout<<" is "<<average<<endl<<endl;

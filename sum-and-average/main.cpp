@@ -4,7 +4,6 @@ void show(int numbers[]){
     for(int i=0;i<5;i++)
         cout<<" "<<numbers[i];
 }
-
 int main()
 {
     int numbers[5]={0,0,0,0,0};
@@ -12,10 +11,10 @@ int main()
     cout<<"XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
     cout << "\n\t SUM AND AVERAGE OF 5 NUMBERS" << endl;
     cout<<"XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
-    cout<<"\n\n           *** Overview ***";
+    cout<<"\n             *** Overview ***";
     cout<<"\n    This program will compute the sum and"
           "\n         the average of 5 numbers"
-          "\n******************************************";
+          "\n********************************************";
     for(int i=0;i<5;++i){
         cout<<"\n Enter a number:";
         cin>>numbers[i];
@@ -25,7 +24,6 @@ int main()
     }
     average = sum/(double)5;
     cout<<"\n\nThe sum of ",show(numbers),cout<<" is "<<sum;
-    cout<<"\nThe average of ",show(numbers),cout<<" is "<<average;;
+    cout<<"\nThe average of ",show(numbers),cout<<" is "<<average<<endl<<endl;
     return 0;
-
 }

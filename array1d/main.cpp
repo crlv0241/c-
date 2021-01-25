@@ -2,8 +2,7 @@
 #include <stdlib.h>
 using namespace std;
 
-double myList[5];
-
+long myList[5];
 void input(){
     cout<<" INPUT 5 NUMBERs:"<<endl;
     for (int i=0; i<5; i++){
@@ -13,8 +12,8 @@ void input(){
     cout<<"\n\n Input Succesfully.";
 }
 
-double findLowest(double arr[]){
-    double highest=0;
+long findLowest(long arr[]){
+    long highest=0;
     for (int i=0;i<5;i++){
 		if(highest==0 && i==0){
 			highest= arr[i];
@@ -25,9 +24,8 @@ double findLowest(double arr[]){
 	return highest;
 	}
 
-
-double findHighest(double arr[]){
-    double lowest = 0;
+long findHighest(long arr[]){
+    long lowest = 0;
     for (int i=0;i<5;i++){
 		if(lowest<arr[i])
 			lowest = arr[i];
@@ -35,28 +33,12 @@ double findHighest(double arr[]){
 	return lowest;
 }
 
-void finds(){
-    int position =0;
-    double number;
-    cout<<" Find a Number:";
-    cin>>number;
-    for (int i=0; i<5; i++){
-        if( number == myList[i]){
-            position = i + 1;
-            cout <<" THE NUMBER "<<number<<" IS IN THE LIST"<<endl;
-            cout <<" POSITION: "<< position<<endl;
-        }
-    }
-    if(position==0)
-        cout<<" THE NUMBER IS NOT IN THE LIST"<<endl;
-}
 
 void evenOdd(){
 
     cout<< "\n NUMBERS\tRESULTS"<<endl;
     for (int i=0;i<5; i++){
-
-        if((int)myList[i]%2 == 0)
+        if(myList[i]%2 == 0)
             cout<<" "<<myList[i]<<"\t\tEVEN\n";
         else
             cout<<" "<<myList[i]<<"\t\tODD\n";
@@ -66,16 +48,14 @@ void evenOdd(){
 void numberSigns(){
         cout<< "\n NUMBERS\tSIGNS"<<endl;
         for (int i=0;i<5; i++){
-        if(myList[i]>0)
-            cout<<" "<<myList[i]<<"\t\tPOSSITIVE\n";
-        else if(myList[i]<0)
-            cout<<" "<<myList[i]<<"\t\tNEGATIVE\n";
-        else
-            cout<<" "<<myList[i]<<"\t\tORIGIN\n";
+            if(myList[i]>0)
+                cout<<" "<<myList[i]<<"\t\tPOSSITIVE\n";
+            else if(myList[i]<0)
+                cout<<" "<<myList[i]<<"\t\tNEGATIVE\n";
+            else
+                cout<<" "<<myList[i]<<"\t\tORIGIN\n";
     }
 }
-
-
 
 int main()
 {
@@ -90,9 +70,8 @@ int main()
     cout << " [1] INPUT 5 NUMBERS " << endl;
     cout << " [2] FIND THE HIGHEST VALUE  " << endl;
     cout << " [3] FIND THE LOWEST VALUE  " << endl;
-    cout << " [4] SEARCH NUMBER  " << endl;
-    cout << " [5] IDENTIFY ODD AND EVEN  " << endl;
-    cout << " [6] POSITIVES AND NEGATIVES" << endl;
+    cout << " [4] IDENTIFY ODD AND EVEN  " << endl;
+    cout << " [5] POSITIVES AND NEGATIVES" << endl;
     cout << " [0] EXIT  " << endl;
     cout << "============================" << endl;
     cout << " CHOOSE A COMMAND:";
@@ -109,23 +88,17 @@ int main()
         cout<<" THE LOWEST VALUE IS "<<findLowest(myList)<<endl;
         break;
     case 4:
-        finds();
-        break;
-    case 5:
         evenOdd();
         break;
-
-    case 6:
+    case 5:
         numberSigns();
         break;
     case 0:
         return false;
         break;
     default:
-        cout<<" INVALID INPUT!";
+        cout<<" INVALID INPUT! ";
     }
-
-
      system("pause");
      system("CLS");
     }

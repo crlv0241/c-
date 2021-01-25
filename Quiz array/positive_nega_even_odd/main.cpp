@@ -3,37 +3,38 @@ using namespace std;
 
 int main()
 {
-    int n;
+    int findN;
     bool found=false;
-    int num[2][5];
+    int num[5][2];
     cout << "Enter 10 numbers:" << endl;
-    for(int i=0;i<2; i++){
-        for(int j=0;j<5;j++){
+    for(int i=0;i<5; i++)
+        for(int j=0;j<2;j++)
             cin>>num[i][j];
-        }
-    }
 
     cout<<"\nEnter a number to be identified:";
-    cin>>n;
+    cin>>findN;
 
     for(int i=0;i<5; i++)
         for(int j=0;j<2;j++){
-            if (n == num[i][j]){
+            if (findN == num[i][j]){
                 found = true;
-                cout<<"The number is in the list!\n\n";
-                if(n<0)
-                    cout<<n<<" is negative number\n";
+                cout<<"\nThe number is in the list!\n\n";
+                if(findN<0)
+                    cout<<findN<<" is negative number\n";
                 else
-                    cout<<n<<" is positive number\n";
-                if(n%2==0){
-                    cout<<n<<" is even number";
-                    break;}
-                else{
-                    cout<<n<<" is odd number";
-                    break;}
+                    cout<<findN<<" is positive number\n";
+
+                if(findN%2==0)
+                    cout<<findN<<" is even number";
+                else
+                    cout<<findN<<" is odd number";
+
+                goto endloop;
             }
         }
+    endloop:
     if(!found)
-        cout<<"\nThe number is not in the list!\n\n";
+        cout<<"The number is not in the list!";
+
     return 0;
 }

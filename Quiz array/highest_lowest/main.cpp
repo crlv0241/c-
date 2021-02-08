@@ -11,6 +11,7 @@ int main()
             break;
         cout<<"\nINVALID INPUT, PLEASE CHOOSE A SIZE FROM 1-10"<<endl;
     }
+
     int num[arr_size];
 
     cout<<"\nPLEASE ENTER "<<arr_size<<" VALUES"<<endl;
